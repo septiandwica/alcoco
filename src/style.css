@@ -1,0 +1,175 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  body.dark-mode {
+    background-color: #000;
+    color: #fff;
+  }
+h4{
+  font-weight: 600;
+}
+h1.t1{
+  font-size: 33px;
+}
+h1.t2{
+  font-size: 80px;
+  line-height: .6;
+}
+.img-wrapper{
+  max-width: 860px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 0px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+/* .logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+} */
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  width: 576px;
+  margin: 0 20px;
+}
+
+@media screen and (max-width: 990px) {
+  h1.t1{
+    font-size: 28px;
+  }
+  h1.t2{
+    font-size: 65px;
+    line-height: .6;
+  }
+
+}
+
+
+
+.about p:nth-of-type(2) {
+  border: 3px dashed rgb(255, 0, 0);
+  
+}
+.red{
+  color: red;
+}
+
+.testimoni .logos img{
+  width: 320px;
+}
+.offer .box-offer {
+  border: 3px dashed rgb(255, 0, 0);
+  border-radius: 5px;
+  
+}
+
+.time-offer{
+  background: #ff9900;
+
+}
+.time-offer .countoffer{
+  background: red;
+  color: white;
+
+}
+#countdown {
+  color: #555;
+  text-align: center;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.countdown-item {
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); */
+}
+
+.countdown-item span {
+  display: block;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.countdown-item {
+  font-size: 32px;
+}
+.order-btn i{
+  font-size: 20px;
+}
+@media screen and (max-width:576px) {
+  .logos-slide img {
+    width: 320px;
+    margin: 0 20px;
+  }
+
+.countdown-item span {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.countdown-item {
+  font-size: 25px;
+}
+.order-btn i{
+  font-size: 20px;
+}
+}
+/* #originalPriceContainer{
+  display: none;
+} */
