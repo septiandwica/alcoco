@@ -76,7 +76,7 @@ function submitForm() {
             const alamat = document.getElementById('address').value;
             const notel = document.getElementById('notel').value;
 
-            const custnum = 6287752380358;
+            const custnum = 6281392385176;
 
             if (quantity <= 0) {
               alert('Harga total tidak valid. Pastikan jumlah barang sudah benar.');
@@ -85,6 +85,6 @@ function submitForm() {
             const message = `Saya Mau Order *${product}*\n\nJumlah Barang: ${quantity}\nNama Pembeli: ${name}\nNo Telp Yang Bisa Dihubungi: ${notel}\nAlamat Pengiriman: ${alamat}`;
             const waLink = `https://wa.me/${custnum}?text=${encodeURIComponent(message)}`;
             
-            window.open(waLink, '_blank');
+            window.open(waLink, '_parent');
             return false;
         }

@@ -22,7 +22,7 @@ h1.t1{
   font-size: 33px;
 }
 h1.t2{
-  font-size: 80px;
+  font-size: 69px;
   line-height: .6;
 }
 .img-wrapper{
@@ -85,7 +85,7 @@ h1.t2{
     font-size: 28px;
   }
   h1.t2{
-    font-size: 65px;
+    font-size: 55px;
     line-height: .6;
   }
 
@@ -110,9 +110,15 @@ h1.t2{
   
 }
 
-.time-offer{
+.time-offer, .kelebihan{
   background: #ff9900;
 
+}
+.offer del{
+  font-size: 20px;
+}
+.kelebihan li{
+  font-size: 18px;
 }
 .time-offer .countoffer{
   background: red;
