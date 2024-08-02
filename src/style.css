@@ -179,3 +179,39 @@ h1.t2{
 /* #originalPriceContainer{
   display: none;
 } */
+
+
+.offerdel h3{
+  font-size: 20px;
+}
+@keyframes strikeThrough {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.offerdel del {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  color: #999;
+}
+
+.offerdel del::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: red;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  animation: strikeThrough 2s ease-in-out infinite;
+}
+
