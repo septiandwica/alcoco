@@ -61,8 +61,10 @@ function updatePrice() {
         totalPrice = discountForTwo;
     } else if (selectedPackage === 'C') {
         if (quantity === 1) {
+          validateQuantity(); 
             totalPrice = discountForOne;
         } else if (quantity === 2) {
+          validateQuantity(); 
             totalPrice = discountForTwo;
         } else if (quantity > 2) {
             totalPrice = (quantity * pricePerItem) - (discountPerItemForMoreThanTwo);
@@ -102,7 +104,7 @@ function updatePackageDetails() {
     customQuantityInput.value = 2; // Set default quantity for Paket B
   } else if (selectedPackage === 'C') { 
     customQuantityInput.removeAttribute('readonly'); // Make input editable for Paket C
-    customQuantityInput.setAttribute('placeholder', 'Silahkan Masukan Jumlah Barang Minimal 3');
+    customQuantityInput.setAttribute('placeholder', 'Minimal 3');
     customQuantityContainer.classList.remove('d-none'); // Show container for Paket C
     validateQuantity(); // Validate the input on Paket C
   } else {
@@ -118,7 +120,7 @@ function validateQuantity() {
 
   // Check if value is less than 3 and not empty
   if (customQuantityInput.value < 3 && customQuantityInput.value !== '') {
-    errorMessage.textContent = 'Jumlah barang harus minimal 3';
+    errorMessage.textContent = 'Jumlah barang minimal 3';
     customQuantityInput.classList.add('error'); // Optionally add an error class for styling
   } else {
     errorMessage.textContent = '';
@@ -141,7 +143,7 @@ function submitForm() {
 
   // Validate quantity based on the selected package
   if (selectedPackage === 'C' && (isNaN(quantity) || quantity < 3)) {
-    alert('Untuk Paket C, jumlah barang harus minimal 3.');
+    alert('Untuk Paket C, jumlah barang minimal 3.');
     return false; 
   }
 
